@@ -43,7 +43,7 @@ def runPythonFunction():
 
 
 
-videos_folder_path = 'output/query_results/traffic/left_turn_tldraw1/changed_files'
+videos_folder_path = 'output/query_results/traffic/car_left_turn/changed_files'
 @app.route('/videos', methods=['GET'])
 def list_videos():
     try:
@@ -68,7 +68,7 @@ def get_video(filename):
 
 
 
-vid_path = 'output/queries/left_turn_tldraw1.mp4'
+vid_path = 'output/queries/car_left_turn.mp4'
 @app.route('/video_file', methods=['GET'])
 def get_video_file():
     # Path to your video file
