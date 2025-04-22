@@ -30,7 +30,6 @@ import personSvg from "./shapes/box/person.svg"
 import bikeSvg from "./shapes/box/bike.svg"
 import busPng from "./shapes/box/bus.png"
 import motorcycleSvg from "./shapes/box/motorcycle.svg"
-import Meta from 'antd/lib/card/Meta'
 
 declare const window: Window & { api: Api }
 
