@@ -43,7 +43,7 @@ def runPythonFunction():
 
 
 
-videos_folder_path = 'output/query_results/traffic/carstop_personwalk'
+videos_folder_path = 'output/query_results/traffic/carstop_personwalk/changed_files'
 @app.route('/videos', methods=['GET'])
 def list_videos():
     try:
