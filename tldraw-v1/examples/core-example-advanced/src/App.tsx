@@ -25,7 +25,7 @@ import DisplayVid from 'video_display'
 import QueryPlayer from 'video_player'
 import {Plotly} from 'plotly'
 import { v4 as uuidv4 } from 'uuid';
-import carSvg from "./shapes/box/CarSvg.svg"
+import carSvg from "./shapes/box/car.svg"
 import personSvg from "./shapes/box/person.svg"
 import bikeSvg from "./shapes/box/bike.svg"
 import busPng from "./shapes/box/bus.png"

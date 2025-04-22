@@ -1,7 +1,7 @@
 import { SVGContainer, TLShapeUtil } from '@tldraw/core';
 import * as React from 'react';
 import type { BoxShape } from './BoxShape';
-import carSvg from './CarSvg.svg'
+import carSvg from './car.svg'
 import personSvg from './person.svg'
 import bikeSvg from './bike.svg'
 import busPng from './bus.png'
