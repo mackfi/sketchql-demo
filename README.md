@@ -1,5 +1,15 @@
 # SketchQL Demonstration
 
+Adapted from [https://github.com/georgia-tech-db/sketchql-demo](https://github.com/georgia-tech-db/sketchql-demo)
+
+## Modifications:
+1. Control k-most similar videos, rather than 10 (UI only)
+2. Added object creation support for three more types of objects
+3. Added visualizer for dataset's supported object types
+
+
+# (ORIGINAL README)
+
 ## Description
 
 Sketch-QL is a video database management system for retrieving video moments with a sketch-based query interface.This interface allows users to specify object trajectory events with simple mouse drag-and-drop operations.
