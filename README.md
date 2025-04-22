@@ -1,6 +1,6 @@
 # SketchQL Demonstration
 
-Adapted from (https://github.com/georgia-tech-db/sketchql-demo)[https://github.com/georgia-tech-db/sketchql-demo]
+Adapted from [https://github.com/georgia-tech-db/sketchql-demo](https://github.com/georgia-tech-db/sketchql-demo)
 
 ## Modifications:
 1. Control k-most similar videos, rather than 10 (UI only)
