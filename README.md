@@ -6,6 +6,7 @@ Adapted from [https://github.com/georgia-tech-db/sketchql-demo](https://github.c
 1. Control k-most similar videos, rather than 10 (UI only)
 2. Added object creation support for three more types of objects
 3. Added visualizer for dataset's supported object types
+4. Modified `carstop_personwalk` query result video files to be displayed in the browser
 
 
 # (ORIGINAL README)
