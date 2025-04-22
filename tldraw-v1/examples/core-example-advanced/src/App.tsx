@@ -630,11 +630,11 @@ export default function App({ onMount }: AppProps) {
             Supports Video Files
           </p>
         </Upload.Dragger>
-        <Button onClick={showObjectsModal} style={{marginTop: '25px'}}>Supported Objects</Button>
+        <Button onClick={showObjectsModal} style={{marginTop: "25px"}}>Supported Objects</Button>
         <Modal title="Supported object types for this dataset:" open={isObjectsOpen} onOk={handleOk} onCancel={handleCancel}
           footer={<Button type='primary' onClick={handleOk}>Ok</Button>}
         >
-          <Space direction="vertical" size="middle" style={{ display: 'flex', textAlign: "center", alignContent: "center", alignItems: "center" }}>
+          <Space direction="vertical" size="middle" style={{ display: "flex", textAlign: "center", alignContent: "center", alignItems: "center" }}>
           <Card
             hoverable
             style={{ width: 320, height: 320}}
