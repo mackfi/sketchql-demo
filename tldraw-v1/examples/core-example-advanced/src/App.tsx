@@ -10,7 +10,7 @@ import {
   TLWheelEventHandler,
 } from '@tldraw/core'
 import { Bounds } from '@tldraw/core/src/components/Bounds'
-import { Button, Drawer, Upload } from 'antd'
+import { Button, Card, Drawer, Modal, Space, Upload } from 'antd'
 import * as React from 'react'
 import { Api } from 'state/api'
 import styled from 'stitches.config'
@@ -25,6 +25,12 @@ import DisplayVid from 'video_display'
 import QueryPlayer from 'video_player'
 import {Plotly} from 'plotly'
 import { v4 as uuidv4 } from 'uuid';
+import carSvg from "./shapes/box/CarSvg.svg"
+import personSvg from "./shapes/box/person.svg"
+import bikeSvg from "./shapes/box/bike.svg"
+import busPng from "./shapes/box/bus.png"
+import motorcycleSvg from "./shapes/box/motorcycle.svg"
+import Meta from 'antd/lib/card/Meta'
 
 declare const window: Window & { api: Api }
 
@@ -328,8 +334,18 @@ export default function App({ onMount }: AppProps) {
   const closeUploader = () => setIsUploaderOpen(false);
   const showModal = () => setIsModalOpen(true)
   const onClose = () => setIsModalOpen(false)
+  const [isObjectsOpen, setIsObjectsOpen] = React.useState(false);
 
-  
+  const showObjectsModal = () => {
+    setIsObjectsOpen(true);
+  };
+  const handleOk = () => {
+    setIsObjectsOpen(false);
+  };
+
+  const handleCancel = () => {
+    setIsObjectsOpen(false);
+  };
 
   const onChange = (val: mappingProps) => {
     pointMapping = { ...val }
@@ -605,6 +621,7 @@ export default function App({ onMount }: AppProps) {
         placement="bottom"
         onClose={closeUploader}
         height={400}
+        style={{textAlign: "center"}}
       >
         <Upload.Dragger>
           <p className="ant-upload-drag-icon">
@@ -614,6 +631,44 @@ export default function App({ onMount }: AppProps) {
             Supports Video Files
           </p>
         </Upload.Dragger>
+        <Button onClick={showObjectsModal} style={{marginTop: '25px'}}>Supported Objects</Button>
+        <Modal title="Supported object types for this dataset:" open={isObjectsOpen} onOk={handleOk} onCancel={handleCancel}
+          footer={<Button type='primary' onClick={handleOk}>Ok</Button>}
+        >
+          <Space direction="vertical" size="middle" style={{ display: 'flex', textAlign: "center", alignContent: "center", alignItems: "center" }}>
+          <Card
+            hoverable
+            style={{ width: 320, height: 320}}
+            cover={<img src={carSvg}></img>}
+            title="car">
+          </Card>
+          <Card
+            hoverable
+            style={{ width: 320, height: 320 }}
+            cover={<img src={personSvg} width={240} height={240}></img>}
+            title="person">
+          </Card>
+          <Card
+            hoverable
+            style={{ width: 320, height: 320 }}
+            cover={<img src={bikeSvg}></img>}
+            title="bicycle">
+          </Card>
+          <Card
+            hoverable
+            style={{ width: 320, height: 320 }}
+            cover={<img src={busPng}></img>}
+            title="bus">
+          </Card>
+          <Card
+            hoverable
+            style={{ width: 320, height: 320 }}
+            cover={<img src={motorcycleSvg}></img>}
+            title="motorcycle">
+          </Card>
+          </Space>
+          
+        </Modal>
       </Drawer>
       
       <Drawer

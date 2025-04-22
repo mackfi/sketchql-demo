@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Modal } from 'antd';
+import Input from 'antd/lib/input/Input';
 
 const QueryPlayer: React.FC = () => {
   const [isQueryOpen, setIsQueryOpen] = useState(false);
@@ -46,6 +47,9 @@ const QueryPlayer: React.FC = () => {
             <video controls style={{ width: '100%' }}>
               <source src={vidSrc} type="video/mp4" />
             </video>
+            <div>
+              Videos to retrieve: <Input placeholder={"10"}/>
+            </div>
           </div>
         )}
       </Modal>

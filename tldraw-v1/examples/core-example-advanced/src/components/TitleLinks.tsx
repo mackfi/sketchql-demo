@@ -4,7 +4,8 @@ import styled from 'stitches.config'
 export function TitleLinks() {
   return (
     <TitleLinksContainer>
-      <a href="https://github.com/tldraw/tldraw/tree/main/packages/core">@tldraw/core</a>
+      <a href="https://github.com/mackfi/sketchql-demo">SketchQL Demo</a>
+      {/* <a href="https://github.com/georgia-tech-db/sketchql-demo">Original Repo</a> */}
     </TitleLinksContainer>
   )
 }

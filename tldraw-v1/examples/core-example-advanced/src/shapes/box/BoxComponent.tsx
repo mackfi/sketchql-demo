@@ -3,6 +3,9 @@ import * as React from 'react';
 import type { BoxShape } from './BoxShape';
 import carSvg from './CarSvg.svg'
 import personSvg from './person.svg'
+import bikeSvg from './bike.svg'
+import busPng from './bus.png'
+import motorcycleSvg from './motorcycle.svg'
 
 export const BoxComponent = TLShapeUtil.Component<BoxShape, SVGSVGElement>(
   ({ shape, events, isGhost, meta }, ref) => {
@@ -73,6 +76,52 @@ export const BoxComponent = TLShapeUtil.Component<BoxShape, SVGSVGElement>(
               pointerEvents="all"
           />
           )}
+
+{shape.label === 'bicycle' && (
+            <image
+              href={bikeSvg}
+              width={shape.size[0]}
+              height={shape.size[1]}
+              stroke={color}
+              strokeWidth={3}
+              strokeLinejoin="round"
+              fill="none"
+              rx={4}
+              opacity={isGhost ? 0.3 : 1}
+              pointerEvents="all"
+          />
+          )}
+
+{shape.label === 'bus' && (
+            <image
+              href={busPng}
+              width={shape.size[0]}
+              height={shape.size[1]}
+              stroke={color}
+              strokeWidth={3}
+              strokeLinejoin="round"
+              fill="none"
+              rx={4}
+              opacity={isGhost ? 0.3 : 1}
+              pointerEvents="all"
+          />
+          )}
+
+{shape.label === 'motorcycle' && (
+            <image
+              href={motorcycleSvg}
+              width={shape.size[0]}
+              height={shape.size[1]}
+              stroke={color}
+              strokeWidth={3}
+              strokeLinejoin="round"
+              fill="none"
+              rx={4}
+              opacity={isGhost ? 0.3 : 1}
+              pointerEvents="all"
+          />
+          )}
+          
         </svg>
 
         {isEditing ? (
